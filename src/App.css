@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --themeNavyMedium: #304050;
+  --themeNavyDark: #283845;
+  --themeGrayLight: #f3f3f3;
+  --themeWhite: #fdfdfd;
+  --themeGreen: #1cc09e;
+  --themeBlue: #2084bf;
+  --themeRed: #e95565;
+}
+
+body {
+  font-family: Roboto, 'Open Sans';
+}

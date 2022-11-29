@@ -1,0 +1,56 @@
+@import '../../App.css';
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--themeGrayLight);
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.access-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 1.5rem;
+  text-align: center;
+  padding: 15px;
+  background-color: var(--themeWhite);
+  width: 500px;
+  min-height: 400px;
+  border-radius: 15px;
+  box-shadow: 9px 8px 19px -1px rgba(0,0,0,0.34);}
+
+.access-screen h1 {
+  color: var(--themeNavyDark);
+  font-size: 2.4rem;
+  margin: 0 15px;
+}
+
+.access-screen p {
+  color: var(--themeNavyMedium);
+  font-size: 1.4rem;
+  margin: 15px;
+}
+
+.access-screen nav {
+  margin: 35px 15px 0;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+/* .access-screen nav button {
+} */
+
+.access-screen nav a {
+  border-radius: 5px;
+  margin: 5px;
+  background-color: var(--themeGreen);
+  border: none;
+  padding: 35px;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
