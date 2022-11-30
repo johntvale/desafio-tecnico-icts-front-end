@@ -1,0 +1,67 @@
+@import '../../App.css';
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 7%;
+  align-items: center;
+  height: 110px;
+  width: 100%;
+  background-color: var(--themeNavyMedium);
+  color: var(--themeWhite);
+}
+
+header .logo {
+  width: clamp(125px, 187px, 250px);
+  height: clamp(38px, 57px, 77px);
+}
+
+.menu-header {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 60%;
+}
+
+.nav-btn {
+  background-color: var(--themeNavyMedium);
+  height: 40px;
+  width: 120px;
+  border: 2px;
+  cursor: pointer;
+}
+
+.nav-btn a {
+  text-decoration: none;
+  padding: 10px 25px;
+  font-weight: bold;
+  color: #fdfdfdb3;
+  font-size: 1rem;
+}
+
+.nav-btn:hover {
+  background-color: var(--themeNavyDark);
+  transition: all 0.3s;
+}
+
+.nav-btn a:hover {
+  color: var(--themeWhite);
+  transition: all 0.3s;
+}
+
+.menu-header .sair {
+  margin-left: auto;
+}
+
+.selected {
+  border-bottom: 2px solid var(--themeGreen);
+}
+
+.selected a {
+  color: var(--themeWhite);
+}
+
+@media screen and (max-width: 750px) {
+    
+}

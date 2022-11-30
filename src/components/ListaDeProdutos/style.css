@@ -1,0 +1,53 @@
+@import '../../App.css';
+
+.container-table {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  background-color: var(--themeWhite);
+  margin: 20px 7% 0;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--themeNavyDark);
+  box-shadow: 9px 8px 19px -1px rgba(0,0,0,0.34);
+}
+
+table thead tr th {
+  font-weight: 500;
+  padding: 15px;
+  background-color: var(--themeNavyMedium);
+  color: var(--themeWhite);
+}
+
+table tbody tr td, table thead tr th {
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--themeGrayLight);
+}
+
+table td {
+  max-width: 400px;
+  height: 40px;
+  padding: 5px 15px;
+}
+
+table tbody tr:hover {
+  background-color: var(--themeGreen);
+}
+
+table .btn-details {
+  border-radius: 5px;
+  border: none;
+  background-color: var(--themeBlue);
+  color: var(--themeWhite);
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+table .btn-details:hover {
+  background-color: #006097;
+}

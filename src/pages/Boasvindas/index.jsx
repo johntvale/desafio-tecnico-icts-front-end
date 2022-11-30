@@ -7,7 +7,7 @@ export default function index() {
     <main className="main-container">
       <div className="access-screen">
         <h1>Seja bem vindo(a) ao ICTS Store Manager</h1>
-        <p>Modernidade e Praticidade na organização de suas compras</p>
+        <p>Modernidade e Praticidade na organização de suas compras!</p>
         <nav>
           <Link to="/produtos">Meus produtos</Link>
           <Link to="/compras">Minhas compras</Link>
