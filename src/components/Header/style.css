@@ -6,7 +6,7 @@ header {
   padding: 0 7%;
   align-items: center;
   height: 110px;
-  width: 100%;
+  min-width: fit-content;
   background-color: var(--themeNavyMedium);
   color: var(--themeWhite);
 }
@@ -25,28 +25,23 @@ header .logo {
 }
 
 .nav-btn {
+  letter-spacing: 1;
   background-color: var(--themeNavyMedium);
-  height: 40px;
-  width: 120px;
-  border: 2px;
+  padding: 15px 35px;
   cursor: pointer;
+  font-weight: 500;
+  color: #fdfdfdb3;
+  font-size: 1rem;
+  text-decoration: none;
 }
 
 .nav-btn a {
-  text-decoration: none;
-  padding: 10px 25px;
-  font-weight: bold;
-  color: #fdfdfdb3;
-  font-size: 1rem;
+  border: 2px solid var(--themeNavyMedium);
 }
 
 .nav-btn:hover {
-  background-color: var(--themeNavyDark);
-  transition: all 0.3s;
-}
-
-.nav-btn a:hover {
   color: var(--themeWhite);
+  background-color: var(--themeNavyDark);
   transition: all 0.3s;
 }
 
@@ -55,12 +50,13 @@ header .logo {
 }
 
 .selected {
+  color: var(--themeWhite);
   border-bottom: 2px solid var(--themeGreen);
 }
 
-.selected a {
+/* .selected a {
   color: var(--themeWhite);
-}
+} */
 
 @media screen and (max-width: 750px) {
     

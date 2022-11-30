@@ -1,35 +1,50 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import './style.css';
+import ContextProdutos from '../../context/ContextProdutos';
 
 export default function index({ produtos }) {
+  const { inputFilterValue, handleInputFilter } = useContext(ContextProdutos);
   return (
     <div className="container-table">
-      <table cellSpacing="0">
+      <div className="table-options">
+        <input
+          id="filter"
+          type="text"
+          placeholder="Digite o nome do produto"
+          className="table-filter"
+          onChange={handleInputFilter}
+          value={inputFilterValue}
+        />
+        <Link to="/" className="add-product"> Acicionar Produto</Link>
+      </div>
+      <table className="table">
         <thead>
           <tr>
-            <th>Nome</th>
-            <th>Descrição</th>
-            <th>Preço</th>
-            <th>Ação</th>
+            <th className="th1">Nome</th>
+            <th className="th2">Descrição</th>
+            <th className="th3">Preço</th>
+            <th className="th4">Ação</th>
           </tr>
         </thead>
         <tbody>
           {
-            produtos.map((produto) => (
-              <tr key={produto.id}>
-                <td>{produto.nome}</td>
-                <td>{produto.descricao}</td>
-                <td>{produto.preco}</td>
-                <td>
-                  <button
-                    className="btn-details"
-                    type="button"
-                    id={produto.id}
-                  >
-                    Ver detalhes
-                  </button>
-                </td>
-              </tr>
+            produtos.filter((produto) => produto.nome.toLowerCase()
+              .match(inputFilterValue.toLowerCase())).map((produto) => (
+                <tr key={produto.id}>
+                  <td>{produto.nome}</td>
+                  <td>{produto.descricao}</td>
+                  <td>{produto.preco}</td>
+                  <td>
+                    <Link
+                      className="btn-details"
+                      id={produto.id}
+                      to="/"
+                    >
+                      Ver detalhes
+                    </Link>
+                  </td>
+                </tr>
             ))
           }
         </tbody>
