@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Header from '../../../components/Header';
-import ListaDeProdutos from '../../../components/ListaDeProdutos';
-import { produtos } from '../../../utils/data/mockedList';
+import ListaProdutos from '../../../components/ListaProdutos';
+import Carregando from '../../../components/Carregando';
+import ErrorHandler from '../../../components/ErrorHandler';
+import ContextProdutos from '../../../context/ContextProdutos';
 
-export default function index() {
+export default function ListaDeProdutos() {
+  const { listaDeProdutos, loading, error } = useContext(ContextProdutos);
   return (
     <div className="main-page">
-      <Header title="Produtos" />
-      <ListaDeProdutos produtos={produtos} />
+      <Header />
+      {loading && <Carregando />}
+      {error && <ErrorHandler />}
+      {
+        (!loading && !error && listaDeProdutos)
+        && <ListaProdutos listaDeProdutos={listaDeProdutos} />
+}
+
     </div>
   );
 }

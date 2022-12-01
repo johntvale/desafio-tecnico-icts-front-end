@@ -5,6 +5,7 @@ import './App.css';
 import Boasvindas from './pages/Boasvindas';
 import Produtos from './pages/Produtos';
 import Compras from './pages/Compras';
+import PaginaNaoEncontrada from './pages/PaginaNaoEncontrada';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/compras/:id" element={<h1>Detalhes da compra</h1>} />
         <Route path="/compras/:id/editar" element={<h1>Editar dados da compra</h1>} />
         <Route path="/compras/:id/deletar" element={<h1>Apagar registro da compra </h1>} />
+        <Route path="/*" element={<PaginaNaoEncontrada />} />
       </Routes>
     </Router>
   );

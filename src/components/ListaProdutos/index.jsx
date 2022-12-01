@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import './style.css';
 import ContextProdutos from '../../context/ContextProdutos';
 
-export default function index({ produtos }) {
-  const { inputFilterValue, handleInputFilter } = useContext(ContextProdutos);
+export default function ListaProdutos() {
+  const { listaDeProdutos, inputFilterValue, handleInputFilter } = useContext(ContextProdutos);
   return (
-    <div className="container-table">
+    <main className="container-table">
       <div className="table-options">
         <input
           id="filter"
@@ -29,7 +29,7 @@ export default function index({ produtos }) {
         </thead>
         <tbody>
           {
-            produtos.filter((produto) => produto.nome.toLowerCase()
+            listaDeProdutos.filter((produto) => produto.nome.toLowerCase()
               .match(inputFilterValue.toLowerCase())).map((produto) => (
                 <tr key={produto.id}>
                   <td>{produto.nome}</td>
@@ -39,7 +39,7 @@ export default function index({ produtos }) {
                     <Link
                       className="btn-details"
                       id={produto.id}
-                      to="/"
+                      to={`/produtos/${produto.id}`}
                     >
                       Ver detalhes
                     </Link>
@@ -49,6 +49,6 @@ export default function index({ produtos }) {
           }
         </tbody>
       </table>
-    </div>
+    </main>
   );
 }

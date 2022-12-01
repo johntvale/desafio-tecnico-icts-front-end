@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default function index() {
+export default function DetalhesDaCompra() {
   return (
-    <div>index</div>
+    <div>Detalhes da compra</div>
   );
 }
