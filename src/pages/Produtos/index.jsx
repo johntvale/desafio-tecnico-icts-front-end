@@ -7,12 +7,12 @@ import { GET_PRODUTOS } from '../../utils/url-dict';
 export default function index() {
   const [inputFilterValue, setInputFilter] = useState('');
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState({});
+  const [error, setError] = useState(null);
   const [listaDeProdutos, setListaDeProdutos] = useState([]);
 
   useEffect(() => {
-    setLoading(true);
     const fetchData = async () => {
+      setLoading(true);
       try {
         const result = await axios.get(
           GET_PRODUTOS,
@@ -23,10 +23,9 @@ export default function index() {
             },
           },
         );
-        setLoading(false);
         setListaDeProdutos(result.data);
       } catch (err) {
-        if (err.code) {
+        if (err.code !== undefined) {
           setError({
             code: err.code,
             message: err.code,

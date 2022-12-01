@@ -13,10 +13,8 @@ export default function ListaDeProdutos() {
       {loading && <Carregando />}
       {error && <ErrorHandler />}
       {
-        (!loading && !error && listaDeProdutos)
-        && <ListaProdutos listaDeProdutos={listaDeProdutos} />
-}
-
+        listaDeProdutos && <ListaProdutos listaDeProdutos={listaDeProdutos} />
+      }
     </div>
   );
 }

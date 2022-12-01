@@ -6,6 +6,7 @@ import Boasvindas from './pages/Boasvindas';
 import Produtos from './pages/Produtos';
 import Compras from './pages/Compras';
 import PaginaNaoEncontrada from './pages/PaginaNaoEncontrada';
+import DetalhesDoProduto from './pages/Produtos/DetalhesDoProduto';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Boasvindas />} />
         <Route path="/produtos" element={<Produtos />} />
-        <Route path="/produtos/:id" element={<h1>Detalhes do produto </h1>} />
+        <Route path="/produtos/:id" element={<DetalhesDoProduto />} />
         <Route path="/produtos/:id/editar" element={<h1>Editar dados do produto</h1>} />
         <Route path="/produtos/:id/deletar" element={<h1>Apagar registro do produto</h1>} />
         <Route path="/compras" element={<Compras />} />
