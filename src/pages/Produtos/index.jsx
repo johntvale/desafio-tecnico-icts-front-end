@@ -30,14 +30,16 @@ export default function index() {
             code: err.code,
             message: err.code,
           });
+          setLoading(false);
         } else {
           setError({
             code: 500,
             message: 'Erro interno',
           });
+          setLoading(false);
         }
-        setLoading(false);
       }
+      setLoading(false);
     };
     fetchData();
   }, []);
